@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.product:hover {
+  border-color: blue;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.product-price {
+  color: green;
+}
+
+.product:hover .product-name,
+.product:hover .product-price {
+  color: red;
+}
+
+</style>
+<body>
+  <div class="product-container">
+    <div class="product" id="Galaxy tab">
+      <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/309816/xiaomi-13t-pro-xanh-thumb-600x600.jpg" alt="Galaxy tab">
+      <p class="product-name">Xiaomi 13</p>
+      <p class="product-price">13.000.000 VND</p>
+    </div>
+    <div class="product" id="product2">
+      <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/274018/samsung-galaxy-a24-black-thumb-600x600.jpg" alt="Product 2">
+      <p class="product-name">Samsung a24</p>
+      <p class="product-price">5.000.000 VND</p>
+    </div>
+    <!-- Add more products as needed -->
+    <div class="product" id="product2">
+        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/271721/samsung-galaxy-a14-5g-thumb-nau-600x600.jpg" alt="Product 2">
+        <p class="product-name">Samsung A16</p>
+        <p class="product-price">4.000.000 VND</p>
+      </div>
+      <div class="product" id="product2">
+        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/321772/samsung-galaxy-a35-5g-blue-thumbnew-600x600.jpg" alt="Product 2">
+        <p class="product-name">Samsung A14</p>
+        <p class="product-price">8.000.000 VND</p>
+      </div>
+      <div class="product" id="product2">
+        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="Product 2">
+        <p class="product-name">iPhone 15</p>
+        <p class="product-price">27.000.000 VND</p>
+      </div>
+      <div class="product" id="product2">
+        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/321895/oppo-reno11-f-timm-thumb-600x600.jpg" alt="Product 2">
+        <p class="product-name">OPPO reno11</p>
+        <p class="product-price">7.000.000 VND</p>
+      </div>
+      <div class="product" id="product2">
+        <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/321434/realme-note-50-blue-thumb-600x600.jpg" alt="Product 2">
+        <p class="product-name">Realme note50</p>
+        <p class="product-price">10.000.000 VND</p>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
