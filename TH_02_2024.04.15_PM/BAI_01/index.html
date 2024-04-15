@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Tao mot mang ngau nhien
+    function taomangngaunhien(length, min, max) {
+        var mang = [];
+        for (var i = 0; i < length; i++) {
+            mang.push(Math.floor(Math.random() * (max - min + 1)) + min);
+        }
+        return mang;
+    }
+
+    function sapxeptangdan(mang) {
+        return mang.sort(function(a, b) {
+            return a - b;
+        });
+    }
+
+    function loaibotrunglap(mang) {
+        return mang.filter(function(item, index) {
+            return mang.indexOf(item) === index;
+        });
+    }
+
+    var mangngaunhien = taomangngaunhien(10, 1, 20);
+
+    document.write("<p>Mảng ban đầu: " + mangngaunhien + "</p>");
+
+    var sapxepmang = sapxeptangdan(mangngaunhien);
+    document.write("<p>Mảng sau khi sắp xếp: " + sapxepmang + "</p>");
+
+    var mangktl = loaibotrunglap(sapxepmang);
+    document.write("<p>Mảng sau khi loại bỏ các phần tử trùng nhau: " + mangktl + "</p>");
+  </script>
+</body>
+</html>
+

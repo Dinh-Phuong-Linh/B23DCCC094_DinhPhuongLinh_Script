@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+    //a
+    function so_nguyen_lon_nhat(array) {
+        return Math.max(...array.filter(item => Number.isInteger(item)));
+    }
+
+    // b
+    function ktra_so_chinh_phuong(num) {
+        return num > 0 && Math.sqrt(num) % 1 === 0;
+    }
+
+    // c
+    function so_chinh_phuong(array) {
+        return array.filter(item => ktra_so_chinh_phuong(item));
+    }
+
+    // d
+    function tbc_cac_so_khong_am(array) {
+        const nonNegativeNumbers = array.filter(item => item >= 0);
+        const sum = nonNegativeNumbers.reduce((acc, cur) => acc + cur, 0);
+        return sum / nonNegativeNumbers.length;
+    }
+
+    // e
+    function so_lon_hon_tbc(array) {
+        const tb = tbc_cac_so_khong_am(array);
+        return array.filter(item => item > tb);
+    }
+
+    // Mảng các số nguyên
+    var integerArray = [3, 9, 12, 23, 53, 46, 75, 98 , 81];
+
+    // Hiển thị kết quả
+    document.write("<p>Số nguyên lớn nhất trong mảng: " +so_nguyen_lon_nhat(integerArray) + "</p>");
+    document.write("<p>Các số chính phương trong mảng: " +so_chinh_phuong (integerArray) + "</p>");
+    document.write("<p>Trung bình cộng của các số không âm trong mảng: " +tbc_cac_so_khong_am(integerArray) + "</p>");
+    document.write("<p>Các số lớn hơn trung bình cộng của mảng: " + so_lon_hon_tbc(integerArray) + "</p>");
+</script>
+</body>
+</html>
+
