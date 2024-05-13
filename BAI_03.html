@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>slideshow</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://imagetravel.vn/wp-content/uploads/2022/05/nha-tho-phap-4.jpg" style="width:100%">
+  <img class="mySlides" src="https://imagetravel.vn/wp-content/uploads/2022/05/nha-tho-phap-2.jpg" style="width:100%">
+  <img class="mySlides" src="https://imagetravel.vn/wp-content/uploads/2022/05/nha-tho-phap-3.jpg" style="width:100%">
+  <img class="mySlides" src="https://static1.cafeland.vn/cafelandnew/hinh-anh/2022/10/14/153/image-20221014103212-1.jpeg" style="width:100%">
+  <img class="mySlides" src="https://media-cdn-v2.laodong.vn/Storage/newsportal/2019/4/16/728061/Nha-Tho-Duc-Ba-Truoc-01.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+setInterval(function() {
+  plusDivs(1);
+}, 5000);
+</script>
+
+</body>
+</html>
